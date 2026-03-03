@@ -12,22 +12,17 @@ public class Telco implements TelcoSubscription {
         this.unliCallText = unliCallText;
     }
 
-    public String accept(UsagePromo promo) {
-        return promo.showAllowance(telcoName, promoPrice);
-    }
-
-    public String accept(UnliCallOffer offer) {
-        return offer.showUnliCallsTextOffer(telcoName, unliCallText);
-    }
-
+    @Override
     public String getTelcoName() {
         return telcoName;
     }
 
+    @Override
     public double getPromoPrice() {
         return promoPrice;
     }
 
+    @Override
     public boolean getUnliCallText() {
         return unliCallText;
     }
